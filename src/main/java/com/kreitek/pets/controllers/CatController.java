@@ -1,6 +1,7 @@
 package com.kreitek.pets.controllers;
 
 import com.kreitek.pets.Controller;
+import com.kreitek.pets.Logs;
 import com.kreitek.pets.domain.Cat;
 import com.kreitek.pets.infraestructure.bd.DbService;
 
@@ -9,10 +10,13 @@ import java.util.List;
 public class CatController implements Controller {
 
     // TODO Logger declaration
+    static Logs logger = Logs.getInstance();
 
     @Override
     public String executePut(String petName, String ownerName, String telephone) {
         // TODO logger.debug("CatController.executePut " + petName + "," + ownerName + "," + telephone);
+        logger.Debug("CatController.executePut " + petName + "," + ownerName + "," + telephone);
+
         Cat cat = new Cat(petName, ownerName, telephone);
         DbService dbService = DbService.getInstance();
         dbService.addNewCat(cat);
@@ -22,6 +26,8 @@ public class CatController implements Controller {
     @Override
     public String executeGet() {
         // TODO logger.debug("CatController.executeGet CATS");
+        logger.Debug("CatController.executeGet CATS");
+
         DbService dbService = DbService.getInstance();
         List<Cat> cats = dbService.getCats();
         String response = "";
