@@ -2,18 +2,18 @@ package com.kreitek.pets;
 
 import com.kreitek.pets.infraestructure.bd.DbService;
 
-public class Logs {
-    private static Logs instance = null;
-    private Logs() {
+public class Logger {
+    private static Logger instance = null;
+    private Logger() {
         if (instance != null) {
             throw new RuntimeException("Usage getInstance() method to create");
         }
     }
-    public static Logs getInstance() {
+    public static Logger getInstance() {
         if (instance == null) {
-            synchronized(Logs.class) {
+            synchronized(Logger.class) {
                 if (instance == null) {
-                    instance = new Logs();
+                    instance = new Logger();
                 }
             }
         }

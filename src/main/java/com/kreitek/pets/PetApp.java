@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class PetApp {
 
     // TODO Logger declaration
-    static Logs logger = Logs.getInstance();
+    static Logger logger = Logger.getInstance();
 
     public static void main (String[] args) {
         ControllerFactory controllerFactory = new ControllerFactory();
