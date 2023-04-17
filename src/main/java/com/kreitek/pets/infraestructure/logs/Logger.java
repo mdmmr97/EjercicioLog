@@ -1,6 +1,4 @@
-package com.kreitek.pets;
-
-import com.kreitek.pets.infraestructure.bd.DbService;
+package com.kreitek.pets.infraestructure.logs;
 
 public class Logger {
     private static Logger instance = null;

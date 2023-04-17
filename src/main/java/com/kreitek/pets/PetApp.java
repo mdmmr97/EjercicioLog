@@ -3,6 +3,8 @@ package com.kreitek.pets;
 import com.kreitek.pets.controllers.CatController;
 import com.kreitek.pets.controllers.ControllerFactory;
 import com.kreitek.pets.controllers.DogController;
+import com.kreitek.pets.infraestructure.logs.Logger;
+
 import java.util.Scanner;
 
 public class PetApp {

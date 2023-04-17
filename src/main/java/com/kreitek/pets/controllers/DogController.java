@@ -1,8 +1,7 @@
 package com.kreitek.pets.controllers;
 
 import com.kreitek.pets.Controller;
-import com.kreitek.pets.Logger;
-import com.kreitek.pets.domain.Cat;
+import com.kreitek.pets.infraestructure.logs.Logger;
 import com.kreitek.pets.domain.Dog;
 import com.kreitek.pets.infraestructure.bd.DbService;
 
